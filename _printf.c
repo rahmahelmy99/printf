@@ -27,8 +27,7 @@ int _printf(const char *format, ...)
 					is_string(va_arg(args, char *), &count);
 					break;
 				case '%':
-					write(1, "%", 1);
-					count++;
+					is_percision(&count);
 					break;
 				case 'd':
 					is_integer(va_arg(args, int), &count);

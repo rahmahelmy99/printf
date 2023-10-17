@@ -36,3 +36,14 @@ void is_string(char *str, int *count)
 		*count += ln;
 	}
 }
+/**
+ * is_percision - to deal with %.
+ *
+ * 
+ * Return: nothing
+*/
+void is_percision( int *count)
+{
+	write(1, "%", 1);
+	count++;
+}
