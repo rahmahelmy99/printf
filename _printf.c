@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
-void select_sp(void);
+void select_sp(const char *format, va_list args, int count);
 /**
  * _printf - prototype function that produces output according
  * to a format.
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			select_sp();
+			select_sp(format, args, count);
 		}
 		else
 		{
@@ -35,14 +35,13 @@ int _printf(const char *format, ...)
 }
 /**
  * select_sp - select speciefier of the format.
+ * @format: format.
+ * @args:array of args.
+ * @count: pointer to counter
  * Return: nothing.
 */
-void select_sp(void)
+void select_sp(const char *format, va_list args, int count)
 {
-	va_list args;
-	int count = 0;
-	char *format;
-
 	switch (*format)
 	{
 		case 'c':
