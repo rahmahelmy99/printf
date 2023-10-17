@@ -20,20 +20,21 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format == 'c')
-				is_char(va_arg(args, int), &count);
-			else if (*format == 's')
-				is_string(va_arg(args, char *), &count);
-			else if (*format == '%')
-			{
-				write(1, "%", 1);
-				count++;
-			}
-			else
-			{
-				write(1, format - 1, 2);
-				count += 2;
-			}
+			switch (*format)
+				case 'c':
+					is_char(va_arg(args, int), &count);
+					break;
+				case 's':
+					is_string(va_arg(args, char *), &count);
+					break;
+				case '%':
+					write(1, "%", 1);
+					count++;
+					break;
+				default:
+					write(1, format - 1, 2);
+					count += 2;
+					break;
 		}
 		else
 		{
