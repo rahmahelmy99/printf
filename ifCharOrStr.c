@@ -46,14 +46,3 @@ void is_percision(int *count)
 	write(1, "%&", 1);
 	count++;
 }
-/**
- * is_default - default of switch.
- * @count: pointer to count.
- * @format: pointer.
- * Return: nothing.
-*/
-void is_default(const char *format, int *count)
-{
-	write(1, format - 1, 2);
-	count += 2;
-}
