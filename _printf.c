@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * _printf - prototype function that produces output according
- * to a format.
+ * _printf - prototype function that produces output according to a format.
  * @format: the first variable of the variadic function.
  * Return: restult according to a format.
 */
@@ -34,7 +33,8 @@ int _printf(const char *format, ...)
 					is_integer(va_arg(args, int), &count);
 					break;
 				default:
-					is_default(*format, &count);
+					write(1, format - 1, 2);
+					count += 2;
 					break;
 			}
 		}
