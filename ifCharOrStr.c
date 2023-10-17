@@ -36,13 +36,3 @@ void is_string(char *str, int *count)
 		*count += ln;
 	}
 }
-/**
- * is_percision - to deal with %.
- * @count:pointer to count.
- * Return: nothing
-*/
-void is_percision(int *count)
-{
-	write(1, "%&", 1);
-	count++;
-}
