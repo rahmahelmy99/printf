@@ -9,10 +9,9 @@
 
 #define BUFF_SIZE 1024
 
-int _putchar(char c);
+int _printf(const char *format, ...);
 int is_char(int c, int *count);
 void is_string(char *str, int *count);
 int invalid(const char *format);
-int _printf(const char *format, ...);
 
 #endif

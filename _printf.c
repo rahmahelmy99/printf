@@ -28,6 +28,11 @@ int _printf(const char *format, ...)
 				write(1, "%", 1);
 				count++;
 			}
+			else
+			{
+				write(1, format - 1, 2);
+				count += 2;
+			}
 		}
 		else
 		{
