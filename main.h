@@ -15,5 +15,6 @@ void is_char(int c, int *count);
 void is_string(char *str, int *count);
 void is_integer(int num, int *count);
 int _printf(const char *format, ...);
+void select_sp(const char *format, va_list args, int count);
 
 #endif
