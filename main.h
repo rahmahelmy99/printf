@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdbool.h>
 
 #define BUFF_SIZE 1024
 
