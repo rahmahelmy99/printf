@@ -6,7 +6,7 @@
  * @count: pointer to caharacters.
  * Return: the count.
 */
-int is_char(int c, int *count)
+void is_char(int c, int *count)
 {
 	write(1, &c, 1);
 	(*count)++;
