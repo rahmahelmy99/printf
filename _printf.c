@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 					count++;
 					break;
 				case 'd':
+					is_integer(va_arg(args, int), &count);
+					break;
 				case 'i':
 					is_integer(va_arg(args, int), &count);
 					break;
