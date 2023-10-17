@@ -30,14 +30,11 @@ int _printf(const char *format, ...)
 					is_percision(&count);
 					break;
 				case 'd':
-					is_integer(va_arg(args, int), &count);
-					break;
 				case 'i':
 					is_integer(va_arg(args, int), &count);
 					break;
 				default:
-					write(1, format - 1, 2);
-					count += 2;
+					is_default(*format, &count);
 					break;
 			}
 		}
