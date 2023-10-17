@@ -30,7 +30,7 @@ void is_string(char *str, int *count)
 	}
 	else
 	{
-		for (ln = 0; *str != '\0'; ln++)
+		for (ln = 0; str[ln]; ln++)
 			;
 		write(1, str, ln);
 		*count += ln;
