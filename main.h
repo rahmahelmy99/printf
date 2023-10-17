@@ -9,6 +9,7 @@
 
 #define BUFF_SIZE 1024
 
+bool is_invalid(const char *format);
 void is_char(int c, int *count);
 void is_string(char *str, int *count);
 void is_integer(int num, int *count);
