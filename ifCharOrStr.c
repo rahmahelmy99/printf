@@ -1,10 +1,10 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * is_char - to deal with characters.
  * @c: the character
  * @count: pointer to caharacters.
- *
+ * Return: the count.
 */
 int is_char(int c, int *count)
 {
