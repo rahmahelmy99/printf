@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			switch (*format)
+			{
 				case 'c':
 					is_char(va_arg(args, int), &count);
 					break;
@@ -31,10 +32,15 @@ int _printf(const char *format, ...)
 					write(1, "%", 1);
 					count++;
 					break;
+				case 'd':
+				case 'i':
+					is_integer(va_arg(args, int), &count);
+					break;
 				default:
 					write(1, format - 1, 2);
 					count += 2;
 					break;
+			}
 		}
 		else
 		{
