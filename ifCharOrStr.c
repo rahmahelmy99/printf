@@ -25,12 +25,12 @@ void is_string(char *str, int *count)
 
 	if (str == 0)
 	{
-		write(1, "null", 4);
-		*count += 4;
+		write(1, "(null)", 6);
+		*count += 6;
 	}
 	else
 	{
-		for (ln = 0; str[ln]; ln++)
+		for (ln = 0; str[ln] != '\0'; ln++)
 			;
 		write(1, str, ln);
 		*count += ln;
