@@ -29,5 +29,13 @@ int _printf(const char *format, ...)
 				count++;
 			}
 		}
+		else
+		{
+			write(1, format, 1);
+			count++;
+		}
+		format++;
 	}
+	va_end(args);
+	return (count);
 }
