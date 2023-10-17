@@ -8,15 +8,13 @@
 */
 void is_integer(int num, int *count)
 {
-	char buffer[BUFF_SIZE];
+	char buf[BUF_SIZE];
 	int ln, is_negative;
 
 	ln = 0;
 	is_negative = 0;
 	if (num == 0)
-	{
-		buffer[ln++] = '0';
-	}
+		buf[ln++] = '0';
 	else
 	{
 		if (num < 0)
@@ -25,16 +23,16 @@ void is_integer(int num, int *count)
 			num = -num;
 		}
 		do {
-			buffer[ln++] = '0' + (num % 10);
+			buf[ln++] = '0' + (num % 10);
 			num /= 10;
 		} while (num > 0);
 	}
 	if (is_negative)
-		buffer[ln++] = '-';
+		buf[ln++] = '-';
 
 	while (ln > 0)
 	{
-		write(1, &buffer[--ln], 1);
+		write(1, &buf[--ln], 1);
 		(*count)++;
 	}
 }

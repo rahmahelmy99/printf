@@ -8,7 +8,7 @@
 #include <limits.h>
 #include <stdbool.h>
 
-#define BUFF_SIZE 1024
+#define BUF_SIZE 1024
 
 bool is_invalid(const char *format);
 void is_char(int c, int *count);
