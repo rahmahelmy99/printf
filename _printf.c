@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 					is_string(va_arg(args, char *), &count);
 					break;
 				case '%':
-					write(1, "%&", 1);
+					write(1, "%", 1);
 					count++;
 					break;
 				case 'd':
