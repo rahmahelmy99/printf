@@ -19,17 +19,15 @@ void is_integer(int num, int *count)
 		buf[ln] = '0';
 		ln++;
 	}
-	else
+	if (num < 0)
 	{
-		if (num < 0)
-		{
-			is_negative = 1;
-			num = -1 * num;
-		}
-		do {
-			buf[ln++] = (num % 10) + '0';
-			num /= 10;
-		} while (num > 0);
+		is_negative = 1;
+		num = -1 * num;
+	}
+	do {
+		buf[ln++] = (num % 10) + '0';
+		num /= 10;
+	} while (num > 0);
 	}
 	if (is_negative)
 		buf[ln++] = '-';
