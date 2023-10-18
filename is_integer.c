@@ -15,7 +15,10 @@ void is_integer(int num, int *count)
 	ln = 0;
 	is_negative = 0;
 	if (num == 0)
-		buf[ln++] = '0';
+	{
+		buf[ln] = '0';
+		ln++;
+	}
 	else
 	{
 		if (num < 0)
