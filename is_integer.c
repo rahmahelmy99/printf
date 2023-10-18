@@ -24,7 +24,7 @@ void is_integer(int num, int *count)
 			num = -1 * num;
 		}
 		do {
-			buf[ln++] = '0' + (num % 10);
+			buf[ln++] = (num % 10) + '0';
 			num /= 10;
 		} while (num > 0);
 	}
