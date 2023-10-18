@@ -28,7 +28,6 @@ void is_integer(int num, int *count)
 		buf[ln++] = (num % 10) + '0';
 		num /= 10;
 	} while (num > 0);
-	}
 	if (is_negative)
 		buf[ln++] = '-';
 
