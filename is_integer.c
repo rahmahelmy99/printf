@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <unistd.h>
+#include <stdlib.h>
 /**
  * is_integer - count integer according to a format.
  * @num: input number.
@@ -20,7 +21,7 @@ void is_integer(int num, int *count)
 		if (num < 0)
 		{
 			is_negative = 1;
-			num = -num;
+			num = -1 * num;
 		}
 		do {
 			buf[ln++] = '0' + (num % 10);
